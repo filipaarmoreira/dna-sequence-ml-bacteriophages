@@ -18,8 +18,7 @@ ENCODERS = {
     "nucleotide_transformer": "embeddings/embeddings_nt.csv"
 }
 
-# todos têm random_state=42 para garantir que os resultados são reprodutíveis
-# e que as diferenças entre encoders não são devidas à aleatoriedade do treino
+
 CLASSIFIERS = {
     "random_forest": RandomForestClassifier(n_estimators=100, random_state=42, n_jobs=-1),
     "xgboost":       XGBClassifier(random_state=42, n_jobs=-1, verbosity=0),
@@ -47,8 +46,7 @@ for enc_name, path in ENCODERS.items():
             f1_scores.append(f1_score(y_test, y_pred, average="macro"))
 
         all_results[name] = {"f1": f1_scores}
-        print(f"{name}")
-        print(f"  F1 macro: {np.mean(f1_scores):.4f} ± {np.std(f1_scores):.4f}")
+        
 
 with open("evaluation/cv_classifiers_results.json", "w") as f:
     json.dump(all_results, f, indent=2)
