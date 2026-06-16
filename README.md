@@ -1,6 +1,6 @@
 # Leveraging DNA Sequence Representations to Enhance Machine Learning Models: A Case Study on Bacteriophages
 
-This repository contains the code developed as part of a Master's degree project in Bioinformatics at the University of Minho, under the supervision of Professors Fernanda Vieira and Miguel Rocha. The project focuses on benchmarking DNA sequence representation strategies for bacteriophage lifecycle prediction (lytic vs. lysogenic classification).
+This repository contains the code developed as part of a Master's degree project in Bioinformatics at the University of Minho, under the supervision of Professors Fernanda Vieira and Miguel Rocha. The project focuses on benchmarking DNA sequence representation strategies for bacteriophage lifecycle prediction.
 
 ## Project Overview
 
