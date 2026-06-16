@@ -10,7 +10,7 @@ This project benchmarks four DNA sequence representation strategies combined wit
 
 ## Dataset
 
-- **1669 phage sequences**: 1152 lytic, 517 lysogenic
+- 1669 phage sequences: 1152 lytic, 517 lysogenic
 - Sources: BACPHLIP, Deephage, PhagePred dataset containing literature-based lytic and lysogenic phage annotations
 - Sequences retrieved from NCBI, duplicate and null sequences removed, followed by redundancy reduction using CD-HIT at 80% sequence identity
 
