@@ -20,7 +20,7 @@ This project benchmarks four DNA sequence representation strategies combined wit
 - HyenaDNA 
 - DNABERT-2 
 - Nucleotide Transformer
-- 
+  
 ## Classifiers
 
 - Random Forest
