@@ -36,8 +36,7 @@ def make_heatmap(df, title, output_path):
     means = df.groupby("method")["f1"].mean().sort_values(ascending=False)
     order = list(means.index)
 
-    # Conover-Friedman (não paramétrico) 
-    # Usado para todos os métodos pois alguns violam normalidade
+    
     pivot = df.pivot(index="cv_cycle", columns="method", values="f1")[order]
     pc = sp.posthoc_conover_friedman(pivot, p_adjust="holm")
 
@@ -64,7 +63,7 @@ def make_heatmap(df, title, output_path):
                 p = pval_matrix.loc[m1, m2]
                 annot.loc[m1, m2] = f"{d:.2f}\n{sig(p)}"
 
-    # Labels simplificados
+    
     tick_labels = []
     for m in order:
         clf = m.split(" : ")[1] if " : " in m else m
@@ -93,7 +92,7 @@ def make_heatmap(df, title, output_path):
     ax.set_xlabel("")
     ax.set_ylabel("")
     # Nota de rodapé
-    fig.text(0.01, 0.01, "Statistical significance: Conover-Friedman + Holm-Bonferroni correction",
+    fig.text(0.01, 0.01, "Statistical significance: Conover-Friedman + Holm correction",
              fontsize=7, color="grey")
 
     plt.tight_layout()
@@ -101,7 +100,7 @@ def make_heatmap(df, title, output_path):
     plt.close()
     print(f"Guardado: {output_path}")
 
-# Gerar um heatmap por embedding 
+ 
 for enc_key, enc_label in EMBEDDINGS.items():
     df_enc = df_all[df_all["method"].str.startswith(enc_key)].copy()
 
