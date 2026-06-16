@@ -1,4 +1,4 @@
-# DNA Sequence Representations for Bacteriophage Life Cycle Prediction
+# Leveraging DNA Sequence Representations to Enhance Machine Learning Models: A Case Study on Bacteriophages
 
 This repository contains the code developed for the benchmarking study of DNA sequence representation strategies for predicting bacteriophage lifecycle.
 
