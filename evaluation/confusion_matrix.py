@@ -17,7 +17,7 @@ BEST_MODELS = {
     "HyenaDNA + Random Forest": ("embeddings/embeddings_hyenadna.csv", RandomForestClassifier(n_estimators=100, random_state=42, n_jobs=-1)),
 }
 
-CLASS_NAMES = ["Lysogenic", "Lytic"]  # 0 = Lysogenic, 1 = Lytic
+CLASS_NAMES = ["Lysogenic", "Lytic"] 
 
 for model_name, (path, clf) in BEST_MODELS.items():
 
