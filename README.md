@@ -16,13 +16,11 @@ This project benchmarks four DNA sequence representation strategies combined wit
 
 ## Representation Strategies
 
-| Strategy | Description |
-|---|---|
-| Seq2Vec | 4-mer CountVectorizer  |
-| HyenaDNA | Pre-trained DNA foundation model (large-1m) |
-| DNABERT-2 | Pooling of DNABERT-2 embeddings |
-| Nucleotide Transformer | NT v2-500M multi-species embeddings |
-
+- Seq2Vec 
+- HyenaDNA 
+- DNABERT-2 
+- Nucleotide Transformer
+- 
 ## Classifiers
 
 - Random Forest
